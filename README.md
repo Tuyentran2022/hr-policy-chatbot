@@ -12,6 +12,26 @@ The project demonstrates an end-to-end RAG workflow:
 
 > **Data source:** HR policy pages collected from the public HR Help Board website. See the **Data Source and Preparation** section below for reproducible download and cleaning instructions.
 
+## Demo
+
+### Streamlit application UI
+
+The chatbot is served through a Streamlit interface. Users can enter HR-policy-related questions directly in the chat input.
+
+![Streamlit UI](streamlit_ui.png)
+
+### Example 1 — HR policy question
+
+The chatbot retrieves relevant HR policy context and generates a concise answer grounded in the retrieved documents.
+
+![Leave Policy Answer](leave_policy.png)
+
+### Example 2 — Out-of-scope question
+
+When the user asks about a topic outside the HR policy corpus, the chatbot avoids making up an answer and responds that the retrieved context does not contain relevant information.
+
+![Out-of-scope Question](out-of-scope question.png)
+
 ## Key Features
 
 - Semantic search over HR policy documents
@@ -143,6 +163,9 @@ hr-policy-chatbot/
 ├── hr-policies/              # Downloaded and cleaned HR policy documents
 ├── faiss_index/              # Generated local FAISS index
 ├── banner-AI.png             # Streamlit UI banner
+├── image(119).png            # Demo screenshot: Streamlit UI
+├── image(120).png            # Demo screenshot: HR policy answer
+├── image(121).png            # Demo screenshot: out-of-scope answer
 ├── hrpc-FAISS-upload.py      # Ingestion, chunking, embedding, indexing
 ├── hrpc-query.py             # Conversational RAG chain and Streamlit UI
 ├── requirements.txt
@@ -250,6 +273,7 @@ Suggested metrics:
 
 - Automate URL filtering and document cleaning
 - Add a labeled HR-policy evaluation set
+- Add reranking with a cross-encoder
 - Add metadata filters for policy category and document version
 - Return structured source citations in the UI
 - Containerize with Docker
