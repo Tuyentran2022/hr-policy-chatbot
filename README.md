@@ -30,7 +30,7 @@ The chatbot retrieves relevant HR policy context and generates a concise answer 
 
 When the user asks about a topic outside the HR policy corpus, the chatbot avoids making up an answer and responds that the retrieved context does not contain relevant information.
 
-![Out-of-scope Question](out-of-scope question.png)
+![Out-of-scope Question](out_of_scope_question.png)
 
 ## Key Features
 
