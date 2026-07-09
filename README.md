@@ -18,7 +18,7 @@ The project demonstrates an end-to-end RAG workflow:
 
 The chatbot is served through a Streamlit interface. Users can enter HR-policy-related questions directly in the chat input.
 
-![Streamlit UI](streamlit_ui.png)
+![StreamlitUI](streamlit_ui.png)
 
 ### Example 1 — HR policy question
 
